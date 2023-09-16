@@ -59,7 +59,6 @@ const Discounts = () => {
         <>
             <div className="container mx-auto">
                 <ProjectsTitle title={"Aksiyadagi mahsulotlar"} />
-                {/* <button onClick={AddItem}>View</button> */}
                 <div className="container mx-auto">
                     {page?.map((page) =>
                         page.new_cost !== null ? (

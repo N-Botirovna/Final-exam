@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Matras from "../../../assets/images/image.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../../../modals/Modal";
 
 const NewProduct = ({
   weight,
@@ -13,9 +14,11 @@ const NewProduct = ({
   images,
   new_cost,
 }) => {
-  const [item, setItem] = useState("");
+  const [showContent, setShowContent] = useState(false);
+
 
   return (
+   <>
     <div className="mb-10">
       <div className="flex bg-[#F6FBFF]  border border-[#C7DFF5] py-6">
         <div className="w-[50%] relative">
@@ -71,6 +74,11 @@ const NewProduct = ({
         </div>
       </div>
     </div>
+
+{
+  showContent && <Modal showContent={showContent} setShowContent={setShowContent} />
+}
+   </>
   );
 };
 

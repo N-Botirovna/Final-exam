@@ -37,12 +37,12 @@ const TecBox = () => {
 
   return (
     <>
-    <div className="grid grid-cols-3 mb-10">
+    <div className="flex justify-between flex-grow items-center mb-10">
         {
             data?.map((item)=>(
                 <div className="text-center mb-10 " key={item.id}>
                     <h1 className="text-[30px] font-[600] mb-4">{item.name}</h1>
-                    <iframe className="h-[200px] w-[400px] mb-5"  src={item.link} ></iframe>
+                    <iframe className="h-[200px] w-[420px] mb-5"  src={item.link} ></iframe>
                     <p className="text-slate-500 px-10">{item.description}</p>
                 </div>
             ))
