@@ -42,7 +42,7 @@ const Hero = () => {
       {isPending && <div>Loading...</div>}
       {error && <div>Error</div>}
       <Carousel
-        className="rounded-xl w-screen flex gap-[200px] "
+        className="rounded-xl w-screen flex gap-[200px]"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-3">
             {new Array(length).fill("").map((_, i) => (

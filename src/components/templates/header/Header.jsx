@@ -18,7 +18,7 @@ const Header = () => {
 
         <>
             <div className='bg-[#EABF9F] h-screen'>
-                <div className='container mx-auto'>
+                <div className='container mx-auto overflow-hidden'>
                     <div className='mb-4'>
                         <Navbar />
                     </div>
