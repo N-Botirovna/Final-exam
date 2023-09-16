@@ -71,7 +71,7 @@ const Hero = () => {
              
             </div>
             <img
-              className="absolute right-0 bottom-[290px] mr-0 h-[500px] "
+              className="absolute right-0 bottom-[290px] mr-0 h-[500px] object-cover"
               src={Banner}
               alt=""
             />

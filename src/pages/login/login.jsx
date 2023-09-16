@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import LoginInput from "../../components/ui/LoginInput";
 import SubmitButton from "../../components/ui/SubmitButton";
 import Title from "../../components/ui/Title";
+import Home from "../home/Home";
 
 function Login({data}) {
+  let navigate = useNavigate();
+
+
     console.log("Login component rendered");
   
     let {token, setToken} = data;
@@ -14,6 +19,7 @@ function Login({data}) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    navigate("/");
     
     let obj = {
       userName: userName.current.value,
@@ -36,6 +42,8 @@ function Login({data}) {
       })
   }
 
+  
+
   return (
     <>
       <div className="w-[330px] rounded m-auto mt-20 px-7 py-2 border border-slate-400">
@@ -43,7 +51,7 @@ function Login({data}) {
           <Title title={"Kirish"} />
           <LoginInput placeholder={"Login"} name={'userName'}  />
           <LoginInput placeholder={"Parol"} name={'userPass'}  />
-          <SubmitButton title={"Kirish"} />
+          <SubmitButton title={"Kirish"} onClick={() => navigate('/')} />
         </form>
       </div>
     </>
